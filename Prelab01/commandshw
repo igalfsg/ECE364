@@ -1,0 +1,62 @@
+#! /bin/bash
+#$Author$
+#$Date$
+#$HeadURL$
+#$Revision$
+
+
+if [[ -e $1 ]]
+then
+echo "found"
+else
+echo "shit"
+fi
+
+if [[ -r $1 && -w $1 ]]
+then
+echo "r and  w"
+else
+echo "shit"
+fi
+
+#executable
+if [[ -x $1 ]]
+then
+echo "r and  w"
+else
+echo "shit"
+fi
+#directory (file stuff in lecture 1 page 27)
+if [[ -d $1 ]]
+then
+echo "r and  w"
+else
+echo "shit"
+fi
+
+#padd a pritn statement
+printf "%50s\n" string
+
+#get the first ten lines of file
+head -n10 file.in
+
+#get the last 10 lines of file
+tail -n10 file.in
+
+#get the third colom of a file
+cut -f3 football.txt
+
+#get the last 88 char
+tail -c88 file.in
+
+#get first two columns
+cut -f 1-2 football.txt
+
+#get something separated with different delimeter
+cut -f 1-2 -d ':' football.txt
+
+paste 1.txt 2.txt 3.txt
+
+#wc stuff
+wc -w football.txt
+

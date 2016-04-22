@@ -1,0 +1,21 @@
+#! /bin/bash
+#$Author$
+#$Date$
+#$HeadURL$
+#$Revision$
+
+while(($# > 0))
+do
+    if [[ -r $1 ]]
+then
+printf "File %s is readable!\n" $1
+elif [[ ! -e $1 ]]
+then
+touch $1
+
+fi
+    shift
+done
+
+
+exit 0

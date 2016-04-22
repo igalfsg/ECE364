@@ -1,0 +1,19 @@
+#! /bin/bash
+#$Author: ee364a05 $
+#$Date: 2016-01-12 15:09:50 -0500 (Tue, 12 Jan 2016) $
+#$HeadURL: svn+ssh://ece364sv@ecegrid-thin1/home/ecegrid/a/ece364sv/svn/S16/students/ee364a05/Lab00/Script2 $
+#$Revision: 83997 $
+
+Num_Of_Param=$#
+Param_Values=$@
+Num_par_one=$1
+
+while (($Num_par_one >= 0))
+do
+
+echo "$Num_par_one"
+let Num_par_one=$Num_par_one-1 
+
+done
+
+exit 0

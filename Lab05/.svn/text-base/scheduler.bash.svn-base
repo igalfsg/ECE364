@@ -1,0 +1,35 @@
+#! /bin/bash
+#$Author$
+#$Date$
+#$HeadURL$
+#$Revision$
+
+if [[ $# != 1 ]]
+then
+    echo "wrong number of inputs please put only 1 input"
+    exit 1
+fi
+if [[ ! -e $1 ]]
+then
+    echo "Error: $1 does not exist."
+    exit 2
+fi
+if [[ ! -r $1 ]]
+then
+    echo "Error: $1 is not readable."
+    exit 2
+fi
+
+if [[  -e schedule.out ]]
+then
+    echo "Error: schedule.out does exist."
+    exit 3
+fi
+
+while read -r line
+do
+    nam=$(echo $line | cut  -d ' ' -f 1)
+    
+done < $1
+
+exit 0

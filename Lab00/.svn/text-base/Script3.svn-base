@@ -1,0 +1,21 @@
+#! /bin/bash
+#$Author$
+#$Date$
+#$HeadURL$
+#$Revision$
+
+Num_Of_Param=$#
+Param_Values=$@
+Num_par_one=$1
+
+while (($Num_par_one >= 0))
+do
+    if (($Num_par_one % 3 == 0))
+    then
+    echo "$Num_par_one"
+    fi
+let Num_par_one=$Num_par_one-1 
+
+done
+
+exit 0
